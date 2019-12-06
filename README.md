@@ -45,6 +45,8 @@ Enter a short name for your project [example] :
 
   ```
   ddev restart
+  composer install
+  ddev . drush si demo_umami -y
   ```
 
 3. In your web browser, visit [https://d8rector-sandbox.ddev.site](https://d8rector-sandbox.ddev.site)
