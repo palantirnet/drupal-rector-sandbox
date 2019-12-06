@@ -15,7 +15,7 @@ $port = 3306;
 if (empty(getenv('DDEV_PHP_VERSION'))) {
   $host = "127.0.0.1";
   $port = 32787;
-} 
+}
 
 $databases['default']['default'] = array(
   'database' => "db",
@@ -51,8 +51,6 @@ $settings['trusted_host_patterns'] = ['.*'];
 $settings['class_loader_auto_detect'] = FALSE;
 
 // This specifies the default configuration sync directory.
-if (empty($config_directories[CONFIG_SYNC_DIRECTORY])) {
-  $config_directories[CONFIG_SYNC_DIRECTORY] = 'sites/default/files/sync';
+if (empty($settings['config_sync_directory'])) {
+  $settings['config_sync_directory'] = 'config';
 }
-
-
