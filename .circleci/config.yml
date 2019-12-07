@@ -1,10 +1,7 @@
-# This CircleCI configuration is for testing the drupal-skeleton. For project-specific
-# testing, use the configuration installed by palantirnet/the-build.
-
 version: 2
 jobs:
   build:
-    working_directory: ~/drupal-skeleton
+    working_directory: ~/d8rector-sandbox
     docker:
       - image: circleci/php:7.2-node-browsers
       - image: circleci/mysql:5.7-ram
@@ -24,6 +21,14 @@ jobs:
           name: Install packages
           command: sudo apt-get install -y libpng-dev default-mysql-client
       - run:
+          name: Install nvm
+          command: |
+            set +e
+            curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+            touch $BASH_ENV
+            echo 'export NVM_DIR="$HOME/.nvm"' >> $BASH_ENV
+            echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $BASH_ENV
+      - run:
           name: Install PHP extensions
           command: sudo docker-php-ext-install pdo_mysql gd
       - run:
@@ -38,6 +43,10 @@ jobs:
           name: Configure URL in /etc/hosts
           command: echo 127.0.0.1 ${CIRCLE_PROJECT_REPONAME}.local | sudo tee -a /etc/hosts
 
+      # Composer package cache
+      - restore_cache:
+          keys:
+            - composer-v1-
       # Source cache
       - restore_cache:
           keys:
@@ -45,18 +54,6 @@ jobs:
             - source-v1-
 
       - checkout
-
-      # Source cache - update when branch changes
-      - save_cache:
-          key: source-v1-{{ .Branch }}
-          paths:
-            - ".git"
-
-      # Composer package cache
-      - restore_cache:
-          keys:
-            - composer-v1-
-
       - run:
           name: Composer install
           command: composer install --no-interaction --prefer-dist
@@ -68,10 +65,16 @@ jobs:
           key: composer-v1-{{ checksum "/tmp/composer-cache.txt" }}
           paths:
               - ~/.composer
+      # Source cache - update when branch changes
+      - save_cache:
+          key: source-v1-{{ .Branch }}
+          paths:
+            - ".git"
 
+      # Run code reviews before installing Drupal, so that tests fail earlier.
       - run:
-          name: Install the-build in the project
-          command: printf 'http://drupal-skeleton.local\nother\nn' | vendor/bin/the-build-installer
+          name: Run code reviews
+          command: vendor/bin/phing code-review
 
       - run:
           name: Wait for DB
@@ -83,12 +86,16 @@ jobs:
           command: vendor/bin/phing build
       - run:
           name: Install Drupal
-          command: printf 'y' | vendor/bin/phing install -Ddrupal.validate_clean_config.bypass=yes -Ddrupal.sites.default.profile=standard
+          command: vendor/bin/phing install
+      - run:
+          name: Run any migrations
+          command: vendor/bin/phing migrate
       - run:
           name: Run Behat tests
           command: |
-              nohup php -S ${CIRCLE_PROJECT_REPONAME}.local:8000 -t $(pwd)/web/ > /tmp/artifacts/phpd.log 2>&1 &
-              vendor/bin/behat --profile=circleci --suite=default --strict --format=junit --out=/tmp/artifacts
+              nohup php -S ${CIRCLE_PROJECT_REPONAME}.local:8000 -t $(pwd)/${DRUPAL_ROOT}/ > /tmp/artifacts/phpd.log 2>&1 &
+              vendor/bin/phing test
+
       - store_artifacts:
           path: /tmp/artifacts
       - store_test_results:
