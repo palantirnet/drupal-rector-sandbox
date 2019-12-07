@@ -8,18 +8,23 @@
             "email": "info@palantir.net"
         }
     ],
-    "repositories": [
-        {
+    "repositories": {
+        "0": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        "d8rector": {
+            "type": "vcs",
+            "url": "https://github.com/palantirnet/drupal8-rector"
         }
-    ],
+    },
     "require": {
         "composer/installers": "^1.2",
         "drupal/config_installer": "^1.8",
         "drupal/config_split": "^1.4",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-recommended": "^8.8",
+        "drupal8-rector/drupal8-rector": "dev-master",
         "zaporylie/composer-drupal-optimizations": "^1.1"
     },
     "require-dev": {
