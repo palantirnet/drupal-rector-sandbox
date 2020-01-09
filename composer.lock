@@ -1197,20 +1197,20 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/palantirnet/drupal8-rector.git",
-                "reference": "05df1435b90fbb165ba7f8f58cad246dbd082806"
+                "reference": "e7c4a73d5b3cdfe6b59ef6e5cbe58dd9a5bdeb33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/palantirnet/drupal8-rector/zipball/05df1435b90fbb165ba7f8f58cad246dbd082806",
-                "reference": "05df1435b90fbb165ba7f8f58cad246dbd082806",
+                "url": "https://api.github.com/repos/palantirnet/drupal8-rector/zipball/e7c4a73d5b3cdfe6b59ef6e5cbe58dd9a5bdeb33",
+                "reference": "e7c4a73d5b3cdfe6b59ef6e5cbe58dd9a5bdeb33",
                 "shasum": ""
             },
             "require": {
-                "jawira/case-converter": "^1.1"
+                "jawira/case-converter": "^1.1",
+                "rector/rector-prefixed": "^0.6.2"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.14",
-                "rector/rector-prefixed": "^0.6.2"
+                "friendsofphp/php-cs-fixer": "^2.14"
             },
             "type": "library",
             "autoload": {
@@ -1252,7 +1252,7 @@
             "support": {
                 "source": "https://github.com/palantirnet/drupal8-rector/tree/feature/rector-prefix"
             },
-            "time": "2020-01-06T19:38:34+00:00"
+            "time": "2020-01-06T23:26:22+00:00"
         },
         {
             "name": "easyrdf/easyrdf",
@@ -2112,6 +2112,42 @@
             ],
             "description": "A polyfill for getallheaders.",
             "time": "2019-03-08T08:55:37+00:00"
+        },
+        {
+            "name": "rector/rector-prefixed",
+            "version": "v0.6.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rectorphp/rector-prefixed.git",
+                "reference": "890a7e32fb5591149a2ae3539349c53ec0e67fa8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rectorphp/rector-prefixed/zipball/890a7e32fb5591149a2ae3539349c53ec0e67fa8",
+                "reference": "890a7e32fb5591149a2ae3539349c53ec0e67fa8",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2"
+            },
+            "conflict": {
+                "nikic/php-parser": "<4.3",
+                "phpstan/phpstan": "<0.12"
+            },
+            "replace": {
+                "rector/rector": "self.version"
+            },
+            "bin": [
+                "rector",
+                "rector.phar"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Prefixed version of Rector compiled in PHAR",
+            "time": "2020-01-08T14:18:37+00:00"
         },
         {
             "name": "stack/builder",
