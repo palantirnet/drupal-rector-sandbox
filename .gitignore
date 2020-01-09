@@ -34,3 +34,6 @@
 # Ignore virtual environment and artifacts
 .vagrant/
 /artifacts/
+
+# Ignore IDE files
+.idea/
