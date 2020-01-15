@@ -98,10 +98,15 @@ To run project-related commands other than `vagrant up` and `vagrant ssh`:
 
 ## Running Drupal Rector
 
-You can view the report for Rector by running
-`vendor/bin/rector process web/modules/custom/my-module --dry-run --config vendor/drupal8-rector/drupal8-rector/rector.yml`
+Initial setup: In Drupal root directory, Create or copy the initial rector.yml file -
+`cp vendor/drupal8-rector/drupal8-rector/rector.yml .`
 
-If you run this without the `--dry-run` flag, Rector will update your code.
+You can view the Rector report by running
+`vendor/bin/rector process web/modules/custom/my-module --dry-run`
+
+Rector can update your code by running
+`vendor/bin/rector process web/modules/custom/my-module`
+
 
 ## Drupal Development
 
@@ -126,4 +131,4 @@ Because both Vagrant and DDEV are using NFS, if your project was running with Va
 * Run `ddev restart`
 
 ----
-Copyright 2017, 2019 Palantir.net, Inc.
+Copyright 2017-2020 Palantir.net, Inc.
