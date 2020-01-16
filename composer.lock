@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6bcd3bc71c4dea3587b001c3199de81c",
+    "content-hash": "9a238889d5036d05195e5dcb282edfb7",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1192,69 +1192,6 @@
             "time": "2019-12-18T10:34:03+00:00"
         },
         {
-            "name": "drupal8-rector/drupal8-rector",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/palantirnet/drupal8-rector.git",
-                "reference": "b604bb5c36fbd7bd8671062ebcbd8f63c84640eb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/palantirnet/drupal8-rector/zipball/b604bb5c36fbd7bd8671062ebcbd8f63c84640eb",
-                "reference": "b604bb5c36fbd7bd8671062ebcbd8f63c84640eb",
-                "shasum": ""
-            },
-            "require": {
-                "jawira/case-converter": "^1.1",
-                "rector/rector-prefixed": "^0.6.10"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.14"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Drupal8Rector\\": "src"
-                }
-            },
-            "scripts": {
-                "check-style": [
-                    "php-cs-fixer fix --config=./.php_cs.dist --dry-run"
-                ],
-                "fix-style": [
-                    "php-cs-fixer fix --config=./.php_cs.dist"
-                ],
-                "download-drupal-core": [
-                    "@composer create-project drupal-composer/drupal-project:8.x-dev .drupal --no-interaction"
-                ],
-                "update-drupal-core": [
-                    "@composer update drupal/core webflo/drupal-core-require-dev --with-dependencies -d .drupal"
-                ]
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Dezső Biczó",
-                    "email": "mxr576@gmail.com"
-                }
-            ],
-            "description": "Instant fixes for your Drupal 8 code by using Rector.",
-            "keywords": [
-                "ast",
-                "code style",
-                "drupal 8",
-                "phpcs",
-                "rector"
-            ],
-            "support": {
-                "source": "https://github.com/palantirnet/drupal8-rector/tree/master"
-            },
-            "time": "2020-01-15T18:03:19+00:00"
-        },
-        {
             "name": "easyrdf/easyrdf",
             "version": "0.9.1",
             "source": {
@@ -1669,6 +1606,64 @@
                 "xml"
             ],
             "time": "2017-09-04T12:26:28+00:00"
+        },
+        {
+            "name": "palantirnet/drupal8-rector",
+            "version": "0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/palantirnet/drupal8-rector.git",
+                "reference": "78ab70568fb16295ca3ee6cd57ea70a72bd8cc6e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/palantirnet/drupal8-rector/zipball/78ab70568fb16295ca3ee6cd57ea70a72bd8cc6e",
+                "reference": "78ab70568fb16295ca3ee6cd57ea70a72bd8cc6e",
+                "shasum": ""
+            },
+            "require": {
+                "jawira/case-converter": "^1.1",
+                "rector/rector-prefixed": "^0.6.10"
+            },
+            "replace": {
+                "drupal8-rector/drupal8-rector": "*"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.14"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Drupal8Rector\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dezső Biczó",
+                    "email": "mxr576@gmail.com"
+                },
+                {
+                    "name": "Ofer Shaal",
+                    "email": "shaal@palantir.net"
+                },
+                {
+                    "name": "Daniel Montgomery",
+                    "email": "montgomery@palantir.net"
+                }
+            ],
+            "description": "Instant fixes for your Drupal 8 code by using Rector.",
+            "keywords": [
+                "Code style",
+                "Drupal 8",
+                "ast",
+                "phpcs",
+                "rector"
+            ],
+            "time": "2020-01-16T01:16:38+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -9352,9 +9347,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "drupal8-rector/drupal8-rector": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
