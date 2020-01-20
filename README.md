@@ -107,6 +107,34 @@ You can view the Rector report by running
 Rector can update your code by running
 `vendor/bin/rector process web/modules/custom/my-module`
 
+## Developing with Drupal Rector
+
+For development, it may be helpful to store a local copy of the drupal8-rector Git repository and symlink a few files and folders.
+
+Download the repository into the root of this directory,
+
+`git clone git@github.com:palantirnet/drupal8-rector.git`
+
+Remove the composer version and symlink the full repository,
+
+_You will need to modify the full paths with your path to the files / folders. If you are within the VM, these will be different. You can use `pwd` to find the path._
+
+```
+rm -Rf vendor/palantirnet/drupal8-rector
+ln -s /Users/[YOUR USERNAME]/Sites/drupal8-rector-sandbox/drupal8-rector vendor/palantirnet/drupal8-rector
+```
+
+Symlink the configuration file
+
+`ln -s /Users/[YOUR USERNAME]/Sites/drupal8-rector-sandbox/vendor/palantirnet/drupal8-rector/rector.yml rector.yml`
+
+Symlink the example module
+
+`ln -s /Users/[YOUR USERNAME]/Sites/drupal8-rector-sandbox/drupal8-rector/rector_examples web/modules/custom/rector_examples`
+
+Run Rector against the examples
+
+`vendor/bin/rector process web/modules/custom/rector_examples --dry-run`
 
 ## Drupal Development
 
