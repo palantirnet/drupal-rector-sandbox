@@ -124,9 +124,12 @@ rm -Rf vendor/palantirnet/drupal8-rector
 ln -s /Users/[YOUR USERNAME]/Sites/drupal8-rector-sandbox/drupal8-rector vendor/palantirnet/drupal8-rector
 ```
 
-Symlink the configuration file
+Remove the default configuration and symlink the one from drupal8-rector,
 
-`ln -s /Users/[YOUR USERNAME]/Sites/drupal8-rector-sandbox/vendor/palantirnet/drupal8-rector/rector.yml rector.yml`
+```
+rm rector.yml
+ln -s /Users/[YOUR USERNAME]/Sites/drupal8-rector-sandbox/vendor/palantirnet/drupal8-rector/rector.yml rector.yml
+```
 
 Symlink the example module
 
