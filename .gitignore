@@ -37,3 +37,7 @@
 
 # Ignore IDE files
 .idea/
+
+# Ignore a local development copy of drupal8-rector that won't be overwritten by composer.
+/drupal8-rector/
+/web/modules/custom/rector_examples

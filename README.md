@@ -4,11 +4,60 @@ This is the development repository for the Drupal 8 Rector Sandbox. It contains 
 
 ## Table of Contents
 
+* [Running Drupal Rector](#running-drupal-rector)
+* [Developing with Drupal Rector](#developing-with-drupal-rector)
 * [Development Environment](#development-environment)
 * [Getting Started](#getting-started)
 * [How do I work on this?](#how-do-i-work-on-this)
-* [Running Drupal Rector](#running-drupal-rector)
 * [Drupal Development](#drupal-development)
+
+## Running Drupal Rector
+
+Initial setup: In Drupal root directory, Create or copy the initial rector.yml file -
+`cp vendor/palantirnet/drupal8-rector/rector.yml .`
+
+You can view the Rector report by running
+`vendor/bin/rector process web/modules/custom/my-module --dry-run`
+
+Rector can update your code by running
+`vendor/bin/rector process web/modules/custom/my-module`
+
+## Developing with Drupal Rector
+
+For development, it may be helpful to store a local copy of the drupal8-rector Git repository and symlink a few files and folders.
+
+Download the repository into the root of this directory,
+
+`git clone git@github.com:palantirnet/drupal8-rector.git`
+
+Remove the composer version and symlink the full repository,
+
+```
+rm -rf vendor/palantirnet/drupal8-rector
+ln -s ../../drupal8-rector vendor/palantirnet/drupal8-rector
+```
+
+Remove the default configuration and symlink the one from drupal8-rector,
+
+```
+rm rector.yml
+ln -s vendor/palantirnet/drupal8-rector/rector.yml rector.yml
+```
+
+If you do not have a `web/modules/custom` directory, create one
+```
+mkdir web/modules/custom
+```
+
+Symlink the example module into the custom modules directory
+
+```
+ln -s ../../../drupal8-rector/rector_examples web/modules/custom/rector_examples
+```
+
+Run Rector against the examples
+
+`vendor/bin/rector process web/modules/custom/rector_examples --dry-run`
 
 ## Development Environment
 
@@ -95,18 +144,6 @@ To run project-related commands other than `vagrant up` and `vagrant ssh`:
 * View email sent by your development site at [http://d8rector-sandbox.ddev.site:8025](http://d8rector-sandbox.ddev.site:8025)
 * Additional questions:
   * `#ddev` channel on [Drupal Slack](https://drupal.slack.com) (a new account can be created through http://drupalslack.herokuapp.com/)
-
-## Running Drupal Rector
-
-Initial setup: In Drupal root directory, Create or copy the initial rector.yml file -
-`cp vendor/drupal8-rector/drupal8-rector/rector.yml .`
-
-You can view the Rector report by running
-`vendor/bin/rector process web/modules/custom/my-module --dry-run`
-
-Rector can update your code by running
-`vendor/bin/rector process web/modules/custom/my-module`
-
 
 ## Drupal Development
 
