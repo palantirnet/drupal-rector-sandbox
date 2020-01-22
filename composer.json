@@ -20,7 +20,7 @@
         "drupal/config_split": "^1.4",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-recommended": "^8.8",
-        "palantirnet/drupal8-rector": "^0.2",
+        "palantirnet/drupal8-rector": "^0.3",
         "zaporylie/composer-drupal-optimizations": "^1.1"
     },
     "require-dev": {

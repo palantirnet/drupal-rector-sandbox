@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9a238889d5036d05195e5dcb282edfb7",
+    "content-hash": "62dd21db04ca3b9c5c29e3bd80f9e6a9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1609,16 +1609,16 @@
         },
         {
             "name": "palantirnet/drupal8-rector",
-            "version": "0.2.0",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/palantirnet/drupal8-rector.git",
-                "reference": "78ab70568fb16295ca3ee6cd57ea70a72bd8cc6e"
+                "reference": "98aa8aeb8cbf1e539516875de2ea96f07e912fc2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/palantirnet/drupal8-rector/zipball/78ab70568fb16295ca3ee6cd57ea70a72bd8cc6e",
-                "reference": "78ab70568fb16295ca3ee6cd57ea70a72bd8cc6e",
+                "url": "https://api.github.com/repos/palantirnet/drupal8-rector/zipball/98aa8aeb8cbf1e539516875de2ea96f07e912fc2",
+                "reference": "98aa8aeb8cbf1e539516875de2ea96f07e912fc2",
                 "shasum": ""
             },
             "require": {
@@ -1627,9 +1627,6 @@
             },
             "replace": {
                 "drupal8-rector/drupal8-rector": "*"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.14"
             },
             "type": "library",
             "autoload": {
@@ -1660,10 +1657,9 @@
                 "Code style",
                 "Drupal 8",
                 "ast",
-                "phpcs",
                 "rector"
             ],
-            "time": "2020-01-16T01:16:38+00:00"
+            "time": "2020-01-22T21:48:36+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -2110,16 +2106,16 @@
         },
         {
             "name": "rector/rector-prefixed",
-            "version": "v0.6.10",
+            "version": "v0.6.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector-prefixed.git",
-                "reference": "35168039f89b3931c3cad140bd2beb0ecdf3af11"
+                "reference": "ae05be8b96f27a842dce90087a98a539faaa043c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector-prefixed/zipball/35168039f89b3931c3cad140bd2beb0ecdf3af11",
-                "reference": "35168039f89b3931c3cad140bd2beb0ecdf3af11",
+                "url": "https://api.github.com/repos/rectorphp/rector-prefixed/zipball/ae05be8b96f27a842dce90087a98a539faaa043c",
+                "reference": "ae05be8b96f27a842dce90087a98a539faaa043c",
                 "shasum": ""
             },
             "require": {
@@ -2142,7 +2138,7 @@
                 "MIT"
             ],
             "description": "Prefixed version of Rector compiled in PHAR",
-            "time": "2020-01-15T14:19:33+00:00"
+            "time": "2020-01-20T12:58:06+00:00"
         },
         {
             "name": "stack/builder",
@@ -6546,16 +6542,16 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.9.4",
+            "version": "1.9.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "579bb7356d91f9456ccd505f24ca8b667966a0a7"
+                "reference": "b2c28789e80a97badd14145fda39b545d83ca3ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/579bb7356d91f9456ccd505f24ca8b667966a0a7",
-                "reference": "579bb7356d91f9456ccd505f24ca8b667966a0a7",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/b2c28789e80a97badd14145fda39b545d83ca3ef",
+                "reference": "b2c28789e80a97badd14145fda39b545d83ca3ef",
                 "shasum": ""
             },
             "require": {
@@ -6590,7 +6586,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2019-12-15T19:12:40+00:00"
+            "time": "2020-01-17T21:11:47+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -6646,21 +6642,24 @@
         },
         {
             "name": "palantirnet/phing-drush-task",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/palantirnet/phing-drush-task.git",
-                "reference": "76d563987fe748ceae516a768e7938b64b3a8aee"
+                "reference": "79afdbb487ac2eccab96a66e88d7583307441a3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/palantirnet/phing-drush-task/zipball/76d563987fe748ceae516a768e7938b64b3a8aee",
-                "reference": "76d563987fe748ceae516a768e7938b64b3a8aee",
+                "url": "https://api.github.com/repos/palantirnet/phing-drush-task/zipball/79afdbb487ac2eccab96a66e88d7583307441a3e",
+                "reference": "79afdbb487ac2eccab96a66e88d7583307441a3e",
                 "shasum": ""
             },
             "require": {
-                "drush/drush": "^8.1.15 || ^9.0",
+                "drush/drush": "^8.1.15 || ^9.0 || ^10.0",
                 "phing/phing": "~2.9"
+            },
+            "replace": {
+                "continuousphp/phing-drush-task": "*"
             },
             "type": "library",
             "autoload": {
@@ -6688,7 +6687,7 @@
             ],
             "description": "Drush task for Phing",
             "homepage": "https://github.com/palantirnet/phing-drush-task",
-            "time": "2019-11-27T18:05:14+00:00"
+            "time": "2020-01-17T22:10:16+00:00"
         },
         {
             "name": "palantirnet/the-build",
@@ -6737,16 +6736,16 @@
         },
         {
             "name": "palantirnet/the-vagrant",
-            "version": "2.5.0",
+            "version": "2.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/palantirnet/the-vagrant.git",
-                "reference": "dda525d2ada030eeabe3a7d7da48fce1cfeb0b1b"
+                "reference": "10a124250e5974062d84bf9ae9d45d33dea96485"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/palantirnet/the-vagrant/zipball/dda525d2ada030eeabe3a7d7da48fce1cfeb0b1b",
-                "reference": "dda525d2ada030eeabe3a7d7da48fce1cfeb0b1b",
+                "url": "https://api.github.com/repos/palantirnet/the-vagrant/zipball/10a124250e5974062d84bf9ae9d45d33dea96485",
+                "reference": "10a124250e5974062d84bf9ae9d45d33dea96485",
                 "shasum": ""
             },
             "require": {
@@ -6767,7 +6766,7 @@
                 }
             ],
             "description": "Install a Vagrant environment into a Drupal project.",
-            "time": "2019-11-19T19:37:55+00:00"
+            "time": "2020-01-18T00:10:59+00:00"
         },
         {
             "name": "pdepend/pdepend",
@@ -7401,24 +7400,24 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "1.10.1",
+            "version": "v1.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "cbe1df668b3fe136bcc909126a0f529a78d4cbbc"
+                "reference": "b4400efc9d206e83138e2bb97ed7f5b14b831cd9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/cbe1df668b3fe136bcc909126a0f529a78d4cbbc",
-                "reference": "cbe1df668b3fe136bcc909126a0f529a78d4cbbc",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/b4400efc9d206e83138e2bb97ed7f5b14b831cd9",
+                "reference": "b4400efc9d206e83138e2bb97ed7f5b14b831cd9",
                 "shasum": ""
             },
             "require": {
                 "doctrine/instantiator": "^1.0.2",
                 "php": "^5.3|^7.0",
                 "phpdocumentor/reflection-docblock": "^2.0|^3.0.2|^4.0|^5.0",
-                "sebastian/comparator": "^1.2.3|^2.0|^3.0",
-                "sebastian/recursion-context": "^1.0|^2.0|^3.0"
+                "sebastian/comparator": "^1.2.3|^2.0|^3.0|^4.0",
+                "sebastian/recursion-context": "^1.0|^2.0|^3.0|^4.0"
             },
             "require-dev": {
                 "phpspec/phpspec": "^2.5 || ^3.2",
@@ -7460,7 +7459,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2019-12-22T21:05:45+00:00"
+            "time": "2020-01-20T15:57:02+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -8584,16 +8583,16 @@
         },
         {
             "name": "symfony/browser-kit",
-            "version": "v3.4.36",
+            "version": "v3.4.37",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/browser-kit.git",
-                "reference": "2e4c991e27a97a8c27745720b030ff85a5cebdf6"
+                "reference": "ede0c5fa204586e3fa51053fbea9cea8a5a3ee8b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/browser-kit/zipball/2e4c991e27a97a8c27745720b030ff85a5cebdf6",
-                "reference": "2e4c991e27a97a8c27745720b030ff85a5cebdf6",
+                "url": "https://api.github.com/repos/symfony/browser-kit/zipball/ede0c5fa204586e3fa51053fbea9cea8a5a3ee8b",
+                "reference": "ede0c5fa204586e3fa51053fbea9cea8a5a3ee8b",
                 "shasum": ""
             },
             "require": {
@@ -8637,20 +8636,20 @@
             ],
             "description": "Symfony BrowserKit Component",
             "homepage": "https://symfony.com",
-            "time": "2019-10-24T15:33:53+00:00"
+            "time": "2020-01-01T11:03:25+00:00"
         },
         {
             "name": "symfony/config",
-            "version": "v4.4.2",
+            "version": "v4.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "6911d432edd5b50822986604fd5a5be3af856d30"
+                "reference": "4d3979f54472637169080f802dc82197e21fdcce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/6911d432edd5b50822986604fd5a5be3af856d30",
-                "reference": "6911d432edd5b50822986604fd5a5be3af856d30",
+                "url": "https://api.github.com/repos/symfony/config/zipball/4d3979f54472637169080f802dc82197e21fdcce",
+                "reference": "4d3979f54472637169080f802dc82197e21fdcce",
                 "shasum": ""
             },
             "require": {
@@ -8701,20 +8700,20 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2019-12-18T12:00:29+00:00"
+            "time": "2020-01-04T13:00:46+00:00"
         },
         {
             "name": "symfony/css-selector",
-            "version": "v3.4.36",
+            "version": "v3.4.37",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
-                "reference": "f819f71ae3ba6f396b4c015bd5895de7d2f1f85f"
+                "reference": "e1b3e1a0621d6e48ee46092b4c7d8280f746b3c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/f819f71ae3ba6f396b4c015bd5895de7d2f1f85f",
-                "reference": "f819f71ae3ba6f396b4c015bd5895de7d2f1f85f",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/e1b3e1a0621d6e48ee46092b4c7d8280f746b3c5",
+                "reference": "e1b3e1a0621d6e48ee46092b4c7d8280f746b3c5",
                 "shasum": ""
             },
             "require": {
@@ -8754,7 +8753,7 @@
             ],
             "description": "Symfony CssSelector Component",
             "homepage": "https://symfony.com",
-            "time": "2019-10-01T11:57:37+00:00"
+            "time": "2020-01-01T11:03:25+00:00"
         },
         {
             "name": "symfony/dom-crawler",
@@ -8815,16 +8814,16 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v3.4.36",
+            "version": "v3.4.37",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "00cdad0936d06fab136944bc2342b762b1c3a4a2"
+                "reference": "0a0d3b4bda11aa3a0464531c40e681e184e75628"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/00cdad0936d06fab136944bc2342b762b1c3a4a2",
-                "reference": "00cdad0936d06fab136944bc2342b762b1c3a4a2",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/0a0d3b4bda11aa3a0464531c40e681e184e75628",
+                "reference": "0a0d3b4bda11aa3a0464531c40e681e184e75628",
                 "shasum": ""
             },
             "require": {
@@ -8861,20 +8860,20 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2019-11-25T16:36:22+00:00"
+            "time": "2020-01-17T08:50:08+00:00"
         },
         {
             "name": "symfony/finder",
-            "version": "v3.4.36",
+            "version": "v3.4.37",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "290ae21279b37bfd287cdcce640d51204e84afdf"
+                "reference": "a90a9d3b9f458a5cdeabfa4090b20c000ca3962f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/290ae21279b37bfd287cdcce640d51204e84afdf",
-                "reference": "290ae21279b37bfd287cdcce640d51204e84afdf",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/a90a9d3b9f458a5cdeabfa4090b20c000ca3962f",
+                "reference": "a90a9d3b9f458a5cdeabfa4090b20c000ca3962f",
                 "shasum": ""
             },
             "require": {
@@ -8910,20 +8909,20 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2019-11-17T21:55:15+00:00"
+            "time": "2020-01-01T11:03:25+00:00"
         },
         {
             "name": "symfony/lock",
-            "version": "v3.4.36",
+            "version": "v3.4.37",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/lock.git",
-                "reference": "d6ccc33dfc5b7c8e1f59c228db0be36705fbffba"
+                "reference": "340d604e9fe8f76581074a9f364cb1d1c05a3440"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/lock/zipball/d6ccc33dfc5b7c8e1f59c228db0be36705fbffba",
-                "reference": "d6ccc33dfc5b7c8e1f59c228db0be36705fbffba",
+                "url": "https://api.github.com/repos/symfony/lock/zipball/340d604e9fe8f76581074a9f364cb1d1c05a3440",
+                "reference": "340d604e9fe8f76581074a9f364cb1d1c05a3440",
                 "shasum": ""
             },
             "require": {
@@ -8972,20 +8971,20 @@
                 "redlock",
                 "semaphore"
             ],
-            "time": "2019-09-23T14:31:27+00:00"
+            "time": "2020-01-01T11:03:25+00:00"
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v3.4.36",
+            "version": "v3.4.37",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
-                "reference": "cbea8818e9f34e4e9d780bd22bdda21b57d4d5c7"
+                "reference": "ebfd1b428ffc14306e843092763f228bfba168d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/cbea8818e9f34e4e9d780bd22bdda21b57d4d5c7",
-                "reference": "cbea8818e9f34e4e9d780bd22bdda21b57d4d5c7",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/ebfd1b428ffc14306e843092763f228bfba168d0",
+                "reference": "ebfd1b428ffc14306e843092763f228bfba168d0",
                 "shasum": ""
             },
             "require": {
@@ -9037,7 +9036,7 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
-            "time": "2019-09-30T20:33:19+00:00"
+            "time": "2020-01-14T14:27:59+00:00"
         },
         {
             "name": "symfony/polyfill-php72",
@@ -9096,16 +9095,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v4.4.2",
+            "version": "v4.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "be330f919bdb395d1e0c3f2bfb8948512d6bdd99"
+                "reference": "7cfa470bc3b1887a7b2a47c0a702a84ad614fa92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/be330f919bdb395d1e0c3f2bfb8948512d6bdd99",
-                "reference": "be330f919bdb395d1e0c3f2bfb8948512d6bdd99",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/7cfa470bc3b1887a7b2a47c0a702a84ad614fa92",
+                "reference": "7cfa470bc3b1887a7b2a47c0a702a84ad614fa92",
                 "shasum": ""
             },
             "require": {
@@ -9168,7 +9167,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2019-12-18T13:41:29+00:00"
+            "time": "2020-01-04T13:00:46+00:00"
         },
         {
             "name": "theseer/tokenizer",
