@@ -73,7 +73,9 @@ sudo phpenmod -v 7.3 -s cli xdebug
 
 You can then run rector with Xdebug with a command like 
 
+```
 XDEBUG_CONFIG="remote_host=`netstat -rn | grep "^0.0.0.0 " | tr -s ' ' | cut -d " " -f2`" vendor/rector/rector-prefixed/rector process web/modules/custom/rector_examples --dry-run --xdebug
+```
 
 The first part will tell Xdebug how to connect to your IDE. It will probably set an environmental variable `XDEBUG_CONFIG` to include `remote_host=10.0.2.2` or a different IP.
 
