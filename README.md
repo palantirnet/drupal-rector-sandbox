@@ -59,6 +59,26 @@ Run Rector against the examples
 
 `vendor/bin/rector process web/modules/custom/rector_examples --dry-run`
 
+### Using Xdebug with the Vagrant VM
+
+The Vagrant VM includes Xdebug, but it has not been enabled for the command line. If you want to use Xdebug to develop rector files, you can use the included VM. The VM is not required to run the rectors or debug with Xdebug if your host machine has these installed.
+
+```
+# Log into the VM
+vagrant up
+vagrant ssh
+# Enable cli debugging
+sudo phpenmod -v 7.3 -s cli xdebug
+```
+
+You can then run rector with Xdebug with a command like 
+
+XDEBUG_CONFIG="remote_host=`netstat -rn | grep "^0.0.0.0 " | tr -s ' ' | cut -d " " -f2`" vendor/rector/rector-prefixed/rector process web/modules/custom/rector_examples --dry-run --xdebug
+
+The first part will tell Xdebug how to connect to your IDE. It will probably set an environmental variable `XDEBUG_CONFIG` to include `remote_host=10.0.2.2` or a different IP.
+
+The second part is whatever Rector command you want with the `--xdebug` flag which enables debugging.
+
 ## Development Environment
 
 The development environment is based on [palantirnet/the-vagrant](https://github.com/palantirnet/the-vagrant).
