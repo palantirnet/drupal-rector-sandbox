@@ -41,7 +41,7 @@ Remove the default configuration and symlink the one from drupal-rector,
 
 ```
 rm rector.yml
-ln -s vendor/palantirnet/drupal-rector/rector.yml rector.yml
+ln -s drupal-rector/rector.yml rector.yml
 ```
 
 If you do not have a `web/modules/custom` directory, create one
