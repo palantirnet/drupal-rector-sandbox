@@ -1,6 +1,6 @@
-# Drupal 8 Rector Sandbox
+# Drupal Rector Sandbox
 
-This is the development repository for the Drupal 8 Rector Sandbox. It contains the codebase and an environment to run the site for development.
+This is the development repository for the Drupal Rector Sandbox. It contains the codebase and an environment to run the site for development.
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@ This is the development repository for the Drupal 8 Rector Sandbox. It contains 
 ## Running Drupal Rector
 
 Initial setup: In Drupal root directory, Create or copy the initial rector.yml file -
-`cp vendor/palantirnet/drupal8-rector/rector.yml .`
+`cp vendor/palantirnet/drupal-rector/rector.yml .`
 
 You can view the Rector report by running
 `vendor/bin/rector process web/modules/custom/my-module --dry-run`
@@ -24,24 +24,24 @@ Rector can update your code by running
 
 ## Developing with Drupal Rector
 
-For development, it may be helpful to store a local copy of the drupal8-rector Git repository and symlink a few files and folders.
+For development, it may be helpful to store a local copy of the drupal-rector Git repository and symlink a few files and folders.
 
 Download the repository into the root of this directory,
 
-`git clone git@github.com:palantirnet/drupal8-rector.git`
+`git clone git@github.com:palantirnet/drupal-rector.git`
 
 Remove the composer version and symlink the full repository,
 
 ```
-rm -rf vendor/palantirnet/drupal8-rector
-ln -s ../../drupal8-rector vendor/palantirnet/drupal8-rector
+rm -rf vendor/palantirnet/drupal-rector
+ln -s ../../drupal-rector vendor/palantirnet/drupal-rector
 ```
 
-Remove the default configuration and symlink the one from drupal8-rector,
+Remove the default configuration and symlink the one from drupal-rector,
 
 ```
 rm rector.yml
-ln -s vendor/palantirnet/drupal8-rector/rector.yml rector.yml
+ln -s vendor/palantirnet/drupal-rector/rector.yml rector.yml
 ```
 
 If you do not have a `web/modules/custom` directory, create one
@@ -52,7 +52,7 @@ mkdir web/modules/custom
 Symlink the example module into the custom modules directory
 
 ```
-ln -s ../../../drupal8-rector/rector_examples web/modules/custom/rector_examples
+ln -s ../../../drupal-rector/rector_examples web/modules/custom/rector_examples
 ```
 
 Run Rector against the examples
@@ -71,7 +71,7 @@ vagrant ssh
 sudo phpenmod -v 7.3 -s cli xdebug
 ```
 
-You can then run rector with Xdebug with a command like 
+You can then run rector with Xdebug with a command like
 
 ```
 XDEBUG_CONFIG="remote_host=`netstat -rn | grep "^0.0.0.0 " | tr -s ' ' | cut -d " " -f2`" vendor/rector/rector-prefixed/rector process web/modules/custom/rector_examples --dry-run --xdebug
