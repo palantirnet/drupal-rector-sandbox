@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dab63bfd0992a268b0509b5de66b2188",
+    "content-hash": "20fb54187d5a83ba1e8a2ec2944ebe57",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1609,21 +1609,21 @@
         },
         {
             "name": "palantirnet/drupal-rector",
-            "version": "0.3.2",
+            "version": "dev-rector-0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/palantirnet/drupal-rector.git",
-                "reference": "090106738559bac5a1721df7b9966705c614ade3"
+                "reference": "625599d89ceabdb4d6c54e4290aa78f21c89452f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/palantirnet/drupal-rector/zipball/090106738559bac5a1721df7b9966705c614ade3",
-                "reference": "090106738559bac5a1721df7b9966705c614ade3",
+                "url": "https://api.github.com/repos/palantirnet/drupal-rector/zipball/625599d89ceabdb4d6c54e4290aa78f21c89452f",
+                "reference": "625599d89ceabdb4d6c54e4290aa78f21c89452f",
                 "shasum": ""
             },
             "require": {
                 "jawira/case-converter": "^1.1",
-                "rector/rector-prefixed": "0.6.13"
+                "rector/rector-prefixed": "^0.7"
             },
             "replace": {
                 "drupal8-rector/drupal8-rector": "*",
@@ -1661,7 +1661,7 @@
                 "drupal 9",
                 "rector"
             ],
-            "time": "2020-02-17T20:07:12+00:00"
+            "time": "2020-02-17T20:52:42+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -2108,16 +2108,16 @@
         },
         {
             "name": "rector/rector-prefixed",
-            "version": "v0.6.13",
+            "version": "v0.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector-prefixed.git",
-                "reference": "ae05be8b96f27a842dce90087a98a539faaa043c"
+                "reference": "b738c582a9cd169bbdb52039c71a2deaaa0c3826"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector-prefixed/zipball/ae05be8b96f27a842dce90087a98a539faaa043c",
-                "reference": "ae05be8b96f27a842dce90087a98a539faaa043c",
+                "url": "https://api.github.com/repos/rectorphp/rector-prefixed/zipball/b738c582a9cd169bbdb52039c71a2deaaa0c3826",
+                "reference": "b738c582a9cd169bbdb52039c71a2deaaa0c3826",
                 "shasum": ""
             },
             "require": {
@@ -2140,7 +2140,7 @@
                 "MIT"
             ],
             "description": "Prefixed version of Rector compiled in PHAR",
-            "time": "2020-01-20T12:58:06+00:00"
+            "time": "2020-02-14T09:27:34+00:00"
         },
         {
             "name": "stack/builder",
@@ -9351,7 +9351,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "palantirnet/drupal-rector": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
