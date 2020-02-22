@@ -1,5 +1,5 @@
 APIVersion: v1.12.0
-name: d8rector-sandbox
+name: drupal-rector-sandbox
 type: drupal8
 docroot: web
 php_version: "7.3"
