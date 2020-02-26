@@ -24,6 +24,10 @@ Rector can update your code by running
 
 ## Developing with Drupal Rector
 
+Get all dependencies by running composer
+
+`composer install`
+
 For development, it may be helpful to store a local copy of the drupal-rector Git repository and symlink a few files and folders.
 
 Download the repository into the root of this directory,
