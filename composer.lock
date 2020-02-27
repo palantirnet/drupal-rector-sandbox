@@ -1613,17 +1613,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/palantirnet/drupal-rector.git",
-                "reference": "625599d89ceabdb4d6c54e4290aa78f21c89452f"
+                "reference": "823e63dfd087fb27afe9e9b3e99f7d94e8070926"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/palantirnet/drupal-rector/zipball/625599d89ceabdb4d6c54e4290aa78f21c89452f",
-                "reference": "625599d89ceabdb4d6c54e4290aa78f21c89452f",
+                "url": "https://api.github.com/repos/palantirnet/drupal-rector/zipball/823e63dfd087fb27afe9e9b3e99f7d94e8070926",
+                "reference": "823e63dfd087fb27afe9e9b3e99f7d94e8070926",
                 "shasum": ""
             },
             "require": {
                 "jawira/case-converter": "^1.1",
-                "rector/rector-prefixed": "^0.7"
+                "rector/rector-prefixed": "^0.7.2"
             },
             "replace": {
                 "drupal8-rector/drupal8-rector": "*",
@@ -1661,7 +1661,7 @@
                 "drupal 9",
                 "rector"
             ],
-            "time": "2020-02-17T20:52:42+00:00"
+            "time": "2020-02-27T21:48:24+00:00"
         },
         {
             "name": "paragonie/random_compat",
