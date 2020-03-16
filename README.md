@@ -121,7 +121,7 @@ To use DDEV, you will need:
 
 ## Getting Started with Vagrant
 
-1. Clone the project from github: `git clone https://github.com/palantirnet/d8rector-sandbox.git`
+1. Clone the project from github: `git clone git@github.com:palantirnet/drupal-rector-sandbox.git`
 2. From inside the project root, run:
 
   ```
@@ -135,7 +135,7 @@ To use DDEV, you will need:
 
 ## Getting Started with DDEV
 
-1. Clone the project from github: `git clone https://github.com/palantirnet/d8rector-sandbox.git`
+1. Clone the project from github: `git clone git@github.com:palantirnet/drupal-rector-sandbox.git`
 
 2. Run the following commands:
 
