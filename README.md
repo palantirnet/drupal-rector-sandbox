@@ -24,44 +24,26 @@ Rector can update your code by running
 
 ## Developing with Drupal Rector
 
-Get all dependencies by running composer
+1. [Fork drupal-rector project](https://github.com/palantirnet/drupal-rector/fork)
+1. Run `composer install` (or `composer update`)
+<br/>
+It will execute a script (`develop-rector.sh`) that prepares a development
+environment under `drupal-project/` directory.
+1. Add your forked repo inside `drupal-project/` directory
 
-`composer install`
+    ```
+    cd drupal-rector
+    git remote add upstream git@github.com:<your_github_username>/drupal-rector.git
+    ```
 
-For development, it may be helpful to store a local copy of the drupal-rector Git repository and symlink a few files and folders.
-
-Download the repository into the root of this directory,
-
-`git clone git@github.com:palantirnet/drupal-rector.git`
-
-Remove the composer version and symlink the full repository,
-
-```
-rm -rf vendor/palantirnet/drupal-rector
-ln -s ../../drupal-rector vendor/palantirnet/drupal-rector
-```
-
-Remove the default configuration and symlink the one from drupal-rector,
-
-```
-rm rector.yml
-ln -s drupal-rector/rector.yml rector.yml
-```
-
-If you do not have a `web/modules/custom` directory, create one
-```
-mkdir web/modules/custom
-```
-
-Symlink the example module into the custom modules directory
-
-```
-ln -s ../../../drupal-rector/rector_examples web/modules/custom/rector_examples
-```
-
-Run Rector against the examples
-
-`vendor/bin/rector process web/modules/custom/rector_examples --dry-run`
+1. Open a branch for the deprecation you want to create a rule for.
+1. Create code samples that will include deprecated code in `drupal-rector/rector_examples`
+1. Create a new Rector Rule.
+1. Run Rector against the examples
+    ```
+    vendor/bin/rector process web/modules/custom/rector_examples --dry-run
+    ```
+1. Submit a PR to https://github.com/palantirnet/drupal-rector.
 
 ### Using Xdebug with the Vagrant VM
 

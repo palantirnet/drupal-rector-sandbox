@@ -50,6 +50,17 @@
         },
         "sort-packages": true
     },
+    "scripts": {
+        "develop-rector": [
+            "./develop-rector.sh"
+        ],
+        "post-install-cmd": [
+            "@develop-rector"
+        ],
+        "post-update-cmd": [
+            "@develop-rector"
+        ]
+    },
     "extra": {
         "drupal-scaffold": {
             "locations": {
