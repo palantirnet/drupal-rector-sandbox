@@ -24,13 +24,10 @@ Rector can update your code by running
 
 ## Developing with Drupal Rector
 
-1. [Fork drupal-rector project](https://github.com/palantirnet/drupal-rector/fork)
-1. Run `composer install` (or `composer update`)
-<br/>
-It will execute a script (`develop-rector.sh`) that prepares a development
+1. Run `composer install` or `composer update` (it will execute a script `develop-rector.sh` that prepares a development
 environment under `drupal-project/` directory.
+1. [Fork drupal-rector project](https://github.com/palantirnet/drupal-rector/fork)
 1. Add your forked repo inside `drupal-project/` directory
-
     ```
     cd drupal-rector
     git remote add upstream git@github.com:<your_github_username>/drupal-rector.git
