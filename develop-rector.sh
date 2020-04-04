@@ -10,9 +10,23 @@ if [ ! -d "$DIR" ]; then
   git clone git@github.com:palantirnet/drupal-rector.git
 fi
 
-# (re)create symlinks for drupal-rector project and rector.yml file
+echo "Running composer install for drupal-rector"
+composer install -d drupal-rector
+
+echo "(re)create symlinks for drupal-rector, rector-prefixed, rector.yml"
+rm -rf vendor/rector
+mkdir vendor/rector
+ln -s ../../drupal-rector/vendor/rector/rector-prefixed vendor/rector/rector-prefixed
+
 rm -rf vendor/palantirnet/drupal-rector
 ln -s ../../drupal-rector vendor/palantirnet/drupal-rector
+
+rm vendor/bin/rector
+ln -s ../../drupal-rector/vendor/bin/rector vendor/bin/rector
+
+rm vendor/bin/rector.phar
+ln -s ../../drupal-rector/vendor/bin/rector.phar vendor/bin/rector.phar
+
 rm rector.yml
 ln -s drupal-rector/rector.yml rector.yml
 

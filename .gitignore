@@ -41,3 +41,5 @@
 # Ignore a local development copy of drupal-rector that won't be overwritten by composer.
 /drupal-rector/
 /web/modules/custom/rector_examples
+
+rector.yml
