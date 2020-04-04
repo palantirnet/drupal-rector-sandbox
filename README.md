@@ -27,7 +27,8 @@ Rector can update your code by running
 environment under `drupal-project/` directory.
 1. [Fork drupal-rector project](https://github.com/palantirnet/drupal-rector/fork)
 1. Add your forked repo inside `drupal-project/` directory
-    ```
+
+    ```console
     cd drupal-rector
     git remote add upstream git@github.com:<your_github_username>/drupal-rector.git
     ```
@@ -36,16 +37,18 @@ environment under `drupal-project/` directory.
 1. Create code samples that will include deprecated code in `drupal-rector/rector_examples`
 1. Create a new Rector Rule.
 1. Run Rector against the examples
-    ```
+
+    ```console
     vendor/bin/rector process web/modules/custom/rector_examples --dry-run
     ```
+
 1. Submit a PR to https://github.com/palantirnet/drupal-rector.
 
 ### Using Xdebug with the Vagrant VM
 
 The Vagrant VM includes Xdebug, but it has not been enabled for the command line. If you want to use Xdebug to develop rector files, you can use the included VM. The VM is not required to run the rectors or debug with Xdebug if your host machine has these installed.
 
-```
+```console
 # Log into the VM
 vagrant up
 vagrant ssh
@@ -55,7 +58,7 @@ sudo phpenmod -v 7.3 -s cli xdebug
 
 You can then run rector with Xdebug with a command like
 
-```
+```console
 XDEBUG_CONFIG="remote_host=`netstat -rn | grep "^0.0.0.0 " | tr -s ' ' | cut -d " " -f2`" vendor/rector/rector-prefixed/rector process web/modules/custom/rector_examples --dry-run --xdebug
 ```
 
@@ -102,30 +105,31 @@ To use DDEV, you will need:
 1. Clone the project from github: `git clone git@github.com:palantirnet/drupal-rector-sandbox.git`
 2. From inside the project root, run:
 
-  ```
+    ```console
     composer install
     vagrant up
-  ```
+    ```
+
 3. You will be prompted for the administration password on your host machine
 4. Log in to the virtual machine (the VM): `vagrant ssh`
 5. From within the VM, build and install the Drupal site: `phing install`
-6. Visit your site at [d8rector-sandbox.local](http://d8rector-sandbox)
+6. Visit your site at [drupal-rector-sandbox.local](http://drupal-rector-sandbox)
 
 ## Getting Started with DDEV
 
 1. Clone the project from github: `git clone git@github.com:palantirnet/drupal-rector-sandbox.git`
 
-2. Run the following commands:
+1. Run the following commands:
 
-  ```
-  ddev restart
-  composer install
-  ddev . drush si demo_umami -y
-  ```
+    ```console
+    ddev restart
+    composer install
+    ddev . drush si demo_umami -y
+    ```
 
-3. In your web browser, visit [https://d8rector-sandbox.ddev.site](https://d8rector-sandbox.ddev.site)
+1. In your web browser, visit [https://drupal-rector-sandbox.ddev.site](https://drupal-rector-sandbox.ddev.site)
 
-## How do I work on this?
+## How do I work on this
 
 You can edit code, update documentation, and run git commands by opening files directly from your host machine.
 
@@ -144,8 +148,8 @@ To run project-related commands other than `vagrant up` and `vagrant ssh`:
 * Log into docker image (`ddev ssh`) and export the Drupal configuration (`drush config-export`)
 * Backup your database locally (`ddev snapshot`)
 * Run `ddev` to see the available commands.
-* Access your database via phpMyAdmin at [http://d8rector-sandbox.ddev.site:8036](http://d8rector-sandbox.ddev.site:8036) using the username `drupal` and the password `drupal`
-* View email sent by your development site at [http://d8rector-sandbox.ddev.site:8025](http://d8rector-sandbox.ddev.site:8025)
+* Access your database via phpMyAdmin at [http://drupal-rector-sandbox.ddev.site:8036](http://drupal-rector-sandbox.ddev.site:8036) using the username `drupal` and the password `drupal`
+* View email sent by your development site at [http://drupal-rector-sandbox.ddev.site:8025](http://drupal-rector-sandbox.ddev.site:8025)
 * Additional questions:
   * `#ddev` channel on [Drupal Slack](https://drupal.slack.com) (a new account can be created through http://drupalslack.herokuapp.com/)
 
@@ -163,10 +167,12 @@ Additional information on developing for Drupal within this environment is in [d
 ## Troubleshooting
 
 ### NFS error
+
 Because both Vagrant and DDEV are using NFS, if your project was running with Vagrant before:
+
 * Edit `/etc/exports` file
 * Comment out the Vagrant line
-* Add `/Users/<username> -alldirs -mapall=501:20 localhost`
+* Add `/System/Volumes/Data/Users/<username> -alldirs -mapall=501:20 localhost`
 * Restart NFS service `sudo nfsd restart`
 * Test that DDEV can mount NFS `ddev debug nfsmount`
 * Run `ddev restart`
