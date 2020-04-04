@@ -13,8 +13,7 @@ This is the development repository for the Drupal Rector Sandbox. It contains th
 
 ## Running Drupal Rector
 
-Initial setup: In Drupal root directory, Create or copy the initial rector.yml file -
-`cp vendor/palantirnet/drupal-rector/rector.yml .`
+Run `composer install`
 
 You can view the Rector report by running
 `vendor/bin/rector process web/modules/custom/my-module --dry-run`
