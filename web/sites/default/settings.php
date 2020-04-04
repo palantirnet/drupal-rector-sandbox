@@ -50,3 +50,8 @@ foreach ($settings_filenames as $settings_filename) {
     include $settings_file;
   }
 }
+
+// Automatically generated include for settings managed by ddev.
+if (file_exists($app_root . '/' . $site_path . '/settings.ddev.php') && getenv('IS_DDEV_PROJECT') == 'true') {
+  include $app_root . '/' . $site_path . '/settings.ddev.php';
+}
