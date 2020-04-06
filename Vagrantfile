@@ -10,7 +10,7 @@ Vagrant.require_version ">= 2.1.0"
 end
 
 # tunables
-project     = 'd8rector-sandbox'
+project     = 'drupal-rector-sandbox'
 hostname    = "#{project}.local"
 extra_hostnames = []
 
@@ -77,13 +77,6 @@ Vagrant.configure(2) do |config|
         config.vm.provision "d8rector-sandbox-provision", type: "ansible" do |ansible|
             ansible.playbook = ansible_custom_playbook
         end
-    end
-
-    config.trigger.before [:up, :reload] do |trigger|
-        trigger.name = "Composer Install"
-        trigger.run = {
-            inline: "composer install --ignore-platform-reqs"
-        }
     end
 
 end
