@@ -31,9 +31,9 @@ rm rector.yml
 ln -s drupal-rector/rector.yml rector.yml
 
 # Create symlinks for rector_examples to be in drupal's default module directory
-DIR="web/modules/custom/rector_examples/"
-if [ ! -d "$DIR" ]; then
-  echo "Creating a symlink for ${DIR}..."
+LINK="web/modules/custom/rector_examples"
+if [ ! -L "$LINK" ]; then
+  echo "Creating a symlink for ${LINK}..."
   mkdir -p web/modules/custom
   ln -s ../../../drupal-rector/rector_examples web/modules/custom/rector_examples
 fi
