@@ -10,30 +10,20 @@ if [ ! -d "$DIR" ]; then
   git clone git@github.com:palantirnet/drupal-rector.git
 fi
 
-echo "Running composer install for drupal-rector"
-composer install -d drupal-rector
-
-echo "(re)create symlinks for drupal-rector, rector-prefixed, rector.yml"
-rm -rf vendor/rector
-mkdir vendor/rector
-ln -s ../../drupal-rector/vendor/rector/rector-prefixed vendor/rector/rector-prefixed
+echo "(re)create symlinks for drupal-rector, rector.yml"
 
 rm -rf vendor/palantirnet/drupal-rector
 ln -s ../../drupal-rector vendor/palantirnet/drupal-rector
 
-rm vendor/bin/rector
-ln -s ../../drupal-rector/vendor/bin/rector vendor/bin/rector
+# Create symlink for settings file
+if [ ! -L "rector.yml" ]; then
+  echo "Creating a symlink for rector.yml..."
+  ln -s drupal-rector/rector.yml rector.yml
+fi
 
-rm vendor/bin/rector.phar
-ln -s ../../drupal-rector/vendor/bin/rector.phar vendor/bin/rector.phar
-
-rm rector.yml
-ln -s drupal-rector/rector.yml rector.yml
-
-# Create symlinks for rector_examples to be in drupal's default module directory
-LINK="web/modules/custom/rector_examples"
-if [ ! -L "$LINK" ]; then
-  echo "Creating a symlink for ${LINK}..."
+# Create symlink for rector_examples to be in drupal's default module directory
+if [ ! -L "web/modules/custom/rector_examples" ]; then
+  echo "Creating a symlink for web/modules/custom/rector_examples..."
   mkdir -p web/modules/custom
   ln -s ../../../drupal-rector/rector_examples web/modules/custom/rector_examples
 fi
