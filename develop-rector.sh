@@ -7,7 +7,7 @@
 DIR="drupal-rector/"
 if [ ! -d "$DIR" ]; then
   echo "Creating development environment under ${DIR} directory"
-  git clone git@github.com:palantirnet/drupal-rector.git
+  git clone https://github.com/palantirnet/drupal-rector.git
 fi
 
 # Create symlink for settings file
