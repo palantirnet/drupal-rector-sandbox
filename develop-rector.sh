@@ -8,10 +8,12 @@ DIR="drupal-rector/"
 if [ ! -d "$DIR" ]; then
   echo "Creating development environment under ${DIR} directory"
   # If a public SSH key found clone with SSH, otherwise clone with HTTPS
-  FILE="~/.ssh/id_rsa.pub"
-  if [ -f "$FILE" ]; then
+  FILE="$HOME/.ssh/id_rsa.pub"
+  if [ -e "$FILE" ]; then
+    echo "Clone with SSH"
     git clone git@github.com:palantirnet/drupal-rector.git
   else
+    echo "Clone with HTTPS"
     git clone https://github.com/palantirnet/drupal-rector.git
   fi
 fi
