@@ -7,7 +7,13 @@
 DIR="drupal-rector/"
 if [ ! -d "$DIR" ]; then
   echo "Creating development environment under ${DIR} directory"
-  git clone https://github.com/palantirnet/drupal-rector.git
+  # If a public SSH key found clone with SSH, otherwise clone with HTTPS
+  FILE="~/.ssh/id_rsa.pub"
+  if [ -f "$FILE" ]; then
+    git clone git@github.com:palantirnet/drupal-rector.git
+  else
+    git clone https://github.com/palantirnet/drupal-rector.git
+  fi
 fi
 
 # Create symlink for settings file
