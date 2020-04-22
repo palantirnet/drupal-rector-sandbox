@@ -21,7 +21,7 @@ jobs:
 
             -   run: |
                     # Run composer install (set to run 'develop-rector' script before)
-                    composer install
+                    composer install --no-progress
 
             -   run: |
                     # Run the latest drupal-rector with the included rector_examples
