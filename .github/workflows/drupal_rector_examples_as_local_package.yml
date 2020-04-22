@@ -1,0 +1,28 @@
+name: drupal_rector_sandbox
+
+# This test will run on every pull request, and on every commit on any branch
+on:
+    [push, pull_request]
+
+jobs:
+    drupal_rector_examples_as_local_package:
+        runs-on: ubuntu-latest
+        steps:
+            -   uses: actions/checkout@v2
+            -   uses: shivammathur/setup-php@v2
+                with:
+                    php-version: 7.3
+                    coverage: none # disable xdebug, pcov
+                    extensions: "intl"
+
+#           Uncomment to enable SSH access to Github Actions - https://github.com/marketplace/actions/debugging-with-tmate#getting-started
+#            - name: Debugging with tmate
+#              uses: mxschmitt/action-tmate@v2
+
+            -   run: |
+                    # Run composer install (set to run 'develop-rector' script before)
+                    composer install --no-progress
+
+            -   run: |
+                    # Run the latest drupal-rector with the included rector_examples
+                    vendor/bin/rector process web/modules/custom/rector_examples

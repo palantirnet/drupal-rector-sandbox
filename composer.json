@@ -12,6 +12,13 @@
         "0": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        "drupal-rector": {
+            "type": "path",
+            "url": "drupal-rector",
+            "options": {
+                "symlink": true
+            }
         }
     },
     "require": {
@@ -20,7 +27,7 @@
         "drupal/config_split": "^1.4",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-recommended": "^8.8",
-        "palantirnet/drupal-rector": "^0.4.0",
+        "palantirnet/drupal-rector": "@dev",
         "zaporylie/composer-drupal-optimizations": "^1.1"
     },
     "require-dev": {
@@ -54,10 +61,10 @@
         "develop-rector": [
             "./develop-rector.sh"
         ],
-        "post-install-cmd": [
+        "pre-install-cmd": [
             "@develop-rector"
         ],
-        "post-update-cmd": [
+        "pre-update-cmd": [
             "@develop-rector"
         ]
     },
