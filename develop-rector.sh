@@ -1,19 +1,14 @@
-# This script would run after 'composer install' and 'composer update' commands.
-# It creates relative symlinks that (might seem confusing at first) connect
-# between the new development directory (drupal-rector/) and the default
-# directory for composer packages (vendor/palantirnet/drupal-rector)
+# This script would run before 'composer install' and 'composer update' commands.
+# It clones palantirnet/drupal-rector repo to under the drupal-rector/ directory.
+# Composer is set to use the cloned repo instead of getting drupal-rector from packagist
+# (This is done through 'type: path' under repositories section in composer.json)
 
+# Clone palantirnet/drupal-rector if the drupal-rector/ directory does not exist.
 DIR="drupal-rector/"
-echo "Creating development environment under ${DIR} directory"
-
 if [ ! -d "$DIR" ]; then
+  echo "Creating development environment under ${DIR} directory"
   git clone git@github.com:palantirnet/drupal-rector.git
 fi
-
-echo "(re)create symlinks for drupal-rector, rector.yml"
-
-rm -rf vendor/palantirnet/drupal-rector
-ln -s ../../drupal-rector vendor/palantirnet/drupal-rector
 
 # Create symlink for settings file
 if [ ! -L "rector.yml" ]; then
