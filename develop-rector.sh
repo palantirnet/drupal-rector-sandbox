@@ -18,10 +18,10 @@ if [ ! -d "$DIR" ]; then
   fi
 fi
 
-# Create symlink for settings file
-if [ ! -L "rector.yml" ]; then
-  echo "Creating a symlink for rector.yml..."
-  ln -s drupal-rector/rector.yml rector.yml
+# Create a copy of rector.yml file
+if [ ! -e "rector.yml" ]; then
+  echo "Copying rector.yml into the document root directory"
+  cp drupal-rector/rector.yml .
 fi
 
 # Create symlink for rector_examples to be in drupal's default module directory
