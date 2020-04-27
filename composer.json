@@ -27,7 +27,7 @@
         "drupal/config_split": "^1.4",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-recommended": "^8.8",
-        "palantirnet/drupal-rector": "@dev",
+        "palantirnet/drupal-rector": "dev-master",
         "zaporylie/composer-drupal-optimizations": "^1.1"
     },
     "require-dev": {
