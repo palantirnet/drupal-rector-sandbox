@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "51fd79943e4069ae2da52bf7cbb9c97b",
+    "content-hash": "8a39f1c04dca194fbf0e55f5583f4c83",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1613,15 +1613,18 @@
             "dist": {
                 "type": "path",
                 "url": "drupal-rector",
-                "reference": "bf48f9f782566a383ded9f26ffad3404f3d09a04"
+                "reference": "6b03261d9bd74d69d70de3f06a87aa2cfa7f0970"
             },
             "require": {
                 "jawira/case-converter": "^1.1",
-                "rector/rector-prefixed": "^0.7.16"
+                "rector/rector-prefixed": "<0.7.19"
             },
             "replace": {
                 "drupal8-rector/drupal8-rector": "*",
                 "palantirnet/drupal8-rector": "*"
+            },
+            "require-dev": {
+                "behat/behat": "^3.6"
             },
             "type": "library",
             "autoload": {
@@ -2103,16 +2106,16 @@
         },
         {
             "name": "rector/rector-prefixed",
-            "version": "v0.7.16",
+            "version": "v0.7.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector-prefixed.git",
-                "reference": "33a6b4d7d046639c04480a09c7f0a34dd0e52f0e"
+                "reference": "5aa56e4356242514933bcc2631838260ae23ff15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector-prefixed/zipball/33a6b4d7d046639c04480a09c7f0a34dd0e52f0e",
-                "reference": "33a6b4d7d046639c04480a09c7f0a34dd0e52f0e",
+                "url": "https://api.github.com/repos/rectorphp/rector-prefixed/zipball/5aa56e4356242514933bcc2631838260ae23ff15",
+                "reference": "5aa56e4356242514933bcc2631838260ae23ff15",
                 "shasum": ""
             },
             "require": {
@@ -2135,7 +2138,7 @@
                 "MIT"
             ],
             "description": "Prefixed version of Rector compiled in PHAR",
-            "time": "2020-04-16T08:25:24+00:00"
+            "time": "2020-04-23T12:02:50+00:00"
         },
         {
             "name": "stack/builder",
@@ -4578,6 +4581,16 @@
                 "autoload",
                 "dependency",
                 "package"
+            ],
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
             ],
             "time": "2020-04-10T09:44:22+00:00"
         },
@@ -8639,6 +8652,20 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-03-27T16:54:36+00:00"
         },
         {
@@ -8813,6 +8840,20 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-03-16T08:31:04+00:00"
         },
         {
@@ -8938,6 +8979,20 @@
                 "redlock",
                 "semaphore"
             ],
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-03-16T15:51:59+00:00"
         },
         {
@@ -9003,6 +9058,20 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-02-21T08:01:47+00:00"
         },
         {
@@ -9147,6 +9216,20 @@
             "keywords": [
                 "debug",
                 "dump"
+            ],
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
             ],
             "time": "2020-03-27T16:54:36+00:00"
         },
