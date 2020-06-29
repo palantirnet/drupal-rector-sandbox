@@ -1203,12 +1203,12 @@
             "version": "0.9.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/njh/easyrdf.git",
+                "url": "https://github.com/easyrdf/easyrdf.git",
                 "reference": "acd09dfe0555fbcfa254291e433c45fdd4652566"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/njh/easyrdf/zipball/acd09dfe0555fbcfa254291e433c45fdd4652566",
+                "url": "https://api.github.com/repos/easyrdf/easyrdf/zipball/acd09dfe0555fbcfa254291e433c45fdd4652566",
                 "reference": "acd09dfe0555fbcfa254291e433c45fdd4652566",
                 "shasum": ""
             },
@@ -1912,20 +1912,14 @@
         {
             "name": "palantirnet/drupal-rector",
             "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/palantirnet/drupal-rector.git",
-                "reference": "b725f7b36b59a1d822c35844464f2ac894ecda19"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/palantirnet/drupal-rector/zipball/b725f7b36b59a1d822c35844464f2ac894ecda19",
-                "reference": "b725f7b36b59a1d822c35844464f2ac894ecda19",
-                "shasum": ""
+                "type": "path",
+                "url": "drupal-rector",
+                "reference": "3504847d4478cc006faba2947694711311ad35a2"
             },
             "require": {
                 "jawira/case-converter": "^1.1",
-                "rector/rector-prefixed": "0.7.27"
+                "rector/rector-prefixed": "0.7.29"
             },
             "replace": {
                 "drupal8-rector/drupal8-rector": "*",
@@ -1940,7 +1934,6 @@
                     "DrupalRector\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1960,13 +1953,16 @@
             ],
             "description": "Instant fixes for your Drupal code by using Rector.",
             "keywords": [
-                "Code style",
-                "Drupal 8",
                 "ast",
+                "code style",
+                "drupal 8",
                 "drupal 9",
                 "rector"
             ],
-            "time": "2020-06-04T15:15:24+00:00"
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
         },
         {
             "name": "paragonie/random_compat",
@@ -2413,16 +2409,16 @@
         },
         {
             "name": "rector/rector-prefixed",
-            "version": "v0.7.27",
+            "version": "v0.7.29",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector-prefixed.git",
-                "reference": "38f38dbd4bd44777fb192e84d05361f39c5e3750"
+                "reference": "0b8e28a1f5985a4ac10312b4867ec5558a32087d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector-prefixed/zipball/38f38dbd4bd44777fb192e84d05361f39c5e3750",
-                "reference": "38f38dbd4bd44777fb192e84d05361f39c5e3750",
+                "url": "https://api.github.com/repos/rectorphp/rector-prefixed/zipball/0b8e28a1f5985a4ac10312b4867ec5558a32087d",
+                "reference": "0b8e28a1f5985a4ac10312b4867ec5558a32087d",
                 "shasum": ""
             },
             "require": {
@@ -2435,6 +2431,9 @@
             "replace": {
                 "rector/rector": "self.version"
             },
+            "require-dev": {
+                "doctrine/orm": "^2.7"
+            },
             "bin": [
                 "rector",
                 "rector.phar"
@@ -2445,7 +2444,7 @@
                 "MIT"
             ],
             "description": "Prefixed version of Rector compiled in PHAR",
-            "time": "2020-05-30T17:48:21+00:00"
+            "time": "2020-06-05T10:36:19+00:00"
         },
         {
             "name": "stack/builder",
@@ -9455,5 +9454,6 @@
     "platform-dev": [],
     "platform-overrides": {
         "php": "7.3"
-    }
+    },
+    "plugin-api-version": "1.1.0"
 }
