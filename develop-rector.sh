@@ -28,5 +28,5 @@ fi
 if [ ! -L "web/modules/custom/rector_examples" ]; then
   echo "Creating a symlink for web/modules/custom/rector_examples..."
   mkdir -p web/modules/custom
-  ln -s ../../../drupal-rector/rector_examples web/modules/custom/rector_examples
+  ln -s ../../../drupal-rector/example-modules/drupal-8/rector_examples web/modules/custom/rector_examples
 fi
