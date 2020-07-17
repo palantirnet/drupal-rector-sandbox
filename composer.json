@@ -22,7 +22,9 @@
         }
     },
     "require": {
-        "drupal/core-composer-scaffold": "~8",
+        "drupal/core-composer-scaffold": "^9.0.0",
+        "drupal/core-project-message": "^9.0.0",
+        "drupal/core-recommended": "^9.0.0",
         "palantirnet/drupal-rector": "dev-master"
     },
     "require-dev": {
