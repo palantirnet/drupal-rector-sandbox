@@ -1,2 +1,3 @@
 local:
   uri: 'http://drupal-rector-sandbox.local'
+  root: /var/www/drupal-rector-sandbox.local/web
