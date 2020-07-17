@@ -22,26 +22,12 @@
         }
     },
     "require": {
-        "composer/installers": "^1.2",
-        "drupal/config_installer": "^1.8",
-        "drupal/config_split": "^1.4",
         "drupal/core-composer-scaffold": "~8",
-        "drupal/core-recommended": "~8",
-        "palantirnet/drupal-rector": "dev-master",
-        "zaporylie/composer-drupal-optimizations": "^1.1"
+        "palantirnet/drupal-rector": "dev-master"
     },
     "require-dev": {
-        "drupal/core-dev": "^8.8",
-        "drupal/drupal-extension": "^3.1",
         "palantirnet/the-build": "^2.2.1",
         "palantirnet/the-vagrant": "^2.3"
-    },
-    "suggest": {
-        "cweagans/composer-patches": "Try ^1.0. Apply patches to packages, especially Drupal.org contrib.",
-        "drupal/admin_toolbar": "Transforms the default Drupal Toolbar into a drop-down menu.",
-        "drupal/environment_indicator": "Adds a configurable color bar to each one of your environments to help identify which environment you are currently working in.",
-        "drupal/stage_file_proxy": "A solution for getting production files on a development server on demand (add to your development config_split).",
-        "drupal/twig_xdebug": "Enables use of Xdebug breakpoints with Twig templates (add to your development config_split)."
     },
     "conflict": {
         "drupal/drupal": "*"
