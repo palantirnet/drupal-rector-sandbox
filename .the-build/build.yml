@@ -26,7 +26,7 @@ drupal:
 
       # REQUIRED: Your site's URI; the default should be the URI of your local
       # development environment.
-      uri: "https://d8rector-sandbox.local"
+      uri: "https://drupal-rector-sandbox.local"
 
       # OPTIONAL: Drupal hash salt defaults to "temporary".
       hash_salt: "b86039ceb3585921c7808e3a875382521f6fee8ced67c1b324c691593aaabae8"
