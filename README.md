@@ -7,13 +7,16 @@ This is the development repository for the Drupal Rector Sandbox. It contains th
 - [Drupal Rector Sandbox](#drupal-rector-sandbox)
   - [Table of Contents](#table-of-contents)
   - [Running Drupal Rector](#running-drupal-rector)
+    - [Running Drupal Rector against a test module](#running-drupal-rector-against-a-test-module)
   - [Developing with Drupal Rector](#developing-with-drupal-rector)
   - [Development Environment](#development-environment)
   - [Getting Started](#getting-started)
   - [How do I work on this](#how-do-i-work-on-this)
     - [DDEV](#ddev)
+    - [Using XDebug](#using-xdebug)
   - [Troubleshooting](#troubleshooting)
     - [NFS error](#nfs-error)
+  - [How this repository was built](#how-this-repository-was-built)
 
 ## Running Drupal Rector
 
@@ -25,9 +28,12 @@ You can view the Rector report by running
 Rector can update your code by running
 `vendor/bin/rector process web/modules/custom/my-module`
 
-## Developing with Drupal Rector
+### Running Drupal Rector against a test module
 
-TODO: look at the develop-rector.sh script. Include in composer.json?
+Drupal Rector comes with a test module that you can use to confirm rules are working.
+`vendor/bin/rector process web/modules/custom/rector_examples --dry-run`
+
+## Developing with Drupal Rector
 
 1. Run `composer install` or `composer update` (it will execute a script `develop-rector.sh` that prepares a development
 environment under `drupal-project/` directory.
@@ -79,15 +85,30 @@ You can edit code, update documentation, and run git commands by opening files d
 
 ### DDEV
 
-* Running drush commands (`ddev . drush status`)
-* Importing a new database (`ddev import-db --src=<database_file.tar.gz>`)
-* Log into docker image (`ddev ssh`) and export the Drupal configuration (`drush config-export`)
-* Backup your database locally (`ddev snapshot`)
+* Log into docker image (`ddev ssh`)
 * Run `ddev` to see the available commands.
-* Access your database via phpMyAdmin at [http://drupal-rector-sandbox.ddev.site:8036](http://drupal-rector-sandbox.ddev.site:8036) using the username `drupal` and the password `drupal`
-* View email sent by your development site at [http://drupal-rector-sandbox.ddev.site:8025](http://drupal-rector-sandbox.ddev.site:8025)
-* Additional questions:
-  * `#ddev` channel on [Drupal Slack](https://drupal.slack.com) (a new account can be created through http://drupalslack.herokuapp.com/)
+
+### Using XDebug
+
+- Start DDEV, `ddev start`
+- Enable XDebug on DDEV, `ddev xdebug on`
+- SSH into DDEV, `ddev ssh`
+- Put a breakpoint in your IDE like PhpStorm, for example in `drupal-rector/src/Rector/Deprecation/Base/DBBase.php`.
+- Turn on the listener in your IDE
+- Run a command with the `--xdebug` flag such as `vendor/rector/rector-prefixed/rector process web/modules/custom/rector_examples/db_delete.php --dry-run --xdebug`
+- Configure your servers in your IDE so it knows where the files are, see below for PhpStorm.
+
+#### PhpStorm server mapping
+
+Go to: `Preferences` > `Languages & Frameworks` > `PHP` > `Servers`
+Add a server:
+- `Name`: `drupal-rector-sandbox.ddev.site`
+- `Host`: `drupal-rector-sandbox.ddev.site`
+- `Port`: `22`
+
+Under the directories, map `Project Files` > `[local path to where you have this repository]` to `/var/www/html`
+
+You may need to cancel the Rector process and start another one for these to stick.
 
 ## Troubleshooting
 
@@ -101,6 +122,17 @@ Because both Vagrant and DDEV are using NFS, if your project was running with Va
 * Restart NFS service `sudo nfsd restart`
 * Test that DDEV can mount NFS `ddev debug nfsmount`
 * Run `ddev restart`
+
+## How this repository was built
+
+This project was built more or less using these steps.
+
+- Create a standard Drupal install with `composer create-project drupal/recommended-project:~8 ../drupal --no-progress` and then move the files into the root.
+- Create a standard DDEV setup, `ddev config`.
+- Add `develop-rector.sh` script to side-load Drupal Rector for local development.
+- Update `composer.json` to use the version side-loaded.
+- Add `PhpUnit` since it doesn't get installed by default and is needed for some rules.
+- Add a `docker-compose.env.yaml` file for DDEV to support XDebug
 
 ----
 Copyright 2017-2021 Palantir.net, Inc.
