@@ -37,6 +37,7 @@
 
 # Ignore IDE files
 .idea/
+.vscode/
 
 # Ignore a local development copy of drupal-rector that won't be overwritten by composer.
 /drupal-rector/
