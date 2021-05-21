@@ -1,0 +1,17 @@
+name: drupal-rector-sandbox
+recipe: drupal8
+config:
+  webroot: web
+  php: '7.3'
+tooling:
+  rector:
+    service: appserver
+    description: Runs drupal-rector
+    cmd: /app/vendor/bin/rector
+    dir: /app
+
+# Quick help:
+#
+# 1. Run: lando start
+# 2. Initialize the project as normal, use "lando composer ..." instead of just "composer ..."
+# 3. From the same dir as .lando.yml, run: lando rector process web/modules/custom/rector_examples/node_load.php --dry-run
