@@ -26,7 +26,7 @@
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-project-message": "^8.8",
         "drupal/core-recommended": "^8.8",
-        "palantirnet/drupal-rector": "dev-master",
+        "palantirnet/drupal-rector": "dev-main",
         "phpunit/phpunit": "~7.5"
     },
     "conflict": {
