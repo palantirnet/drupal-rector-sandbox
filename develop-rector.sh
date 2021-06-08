@@ -18,10 +18,10 @@ if [ ! -d "$DIR" ]; then
   fi
 fi
 
-# Create a copy of rector.yml file
-if [ ! -e "rector.yml" ]; then
-  echo "Copying rector.yml into the document root directory"
-  cp drupal-rector/rector.yml .
+# Create a copy of rector.php file
+if [ ! -e "rector.php" ]; then
+  echo "Copying rector.php into the document root directory"
+  cp drupal-rector/rector.php .
 fi
 
 # Create symlink for rector_examples to be in drupal's default module directory
