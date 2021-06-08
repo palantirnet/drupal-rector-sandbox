@@ -44,3 +44,4 @@
 /web/modules/custom/rector_examples
 
 rector.yml
+rector.php
