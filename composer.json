@@ -23,11 +23,12 @@
     ],
     "require": {
         "composer/installers": "^1.2",
-        "drupal/core-composer-scaffold": "^8.8",
-        "drupal/core-project-message": "^8.8",
-        "drupal/core-recommended": "^8.8",
+        "drupal/core-composer-scaffold": "^9.0",
+        "drupal/core-project-message": "^9.0",
+        "drupal/core-recommended": "^9.1",
+        "drush/drush": "^10.5",
         "palantirnet/drupal-rector": "dev-main",
-        "phpunit/phpunit": "~7.5"
+        "phpunit/phpunit": "~9.5"
     },
     "conflict": {
         "drupal/drupal": "*"
