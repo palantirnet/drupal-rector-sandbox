@@ -6,7 +6,7 @@ This is the development repository for the Drupal Rector Sandbox. It contains th
 
 In preparation for Drupal 10, we will start supporting PHP 7.4 and PHP 8 for development. To do so requires configuring DDEV, and as a result, we encourage you to run all `composer` and `rector` commands via `ddev exec` (alias `ddev .`).
 
-The current `main` branch supports PHP 7.4.
+The current `main` branch supports PHP 7.4 and may require running `ddev restart` and then `ddev . composer update`.
 
 ## Table of Contents
 
@@ -28,15 +28,18 @@ The current `main` branch supports PHP 7.4.
 
 Run `ddev . composer install`
 
-You can view the Rector report by running
+You can view the Rector report by running:
+
 `ddev . vendor/bin/rector process web/modules/custom/my-module --dry-run`
 
-Rector can update your code by running
+Rector can update your code by running:
+
 `ddev . vendor/bin/rector process web/modules/custom/my-module`
 
 ### Running Drupal Rector against a test module
 
-Drupal Rector comes with a test module that you can use to confirm rules are working.
+Drupal Rector comes with a test module that you can use to confirm rules are working:
+
 `ddev . vendor/bin/rector process web/modules/custom/rector_examples --dry-run`
 
 ## Developing with Drupal Rector
