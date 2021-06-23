@@ -2,6 +2,12 @@
 
 This is the development repository for the Drupal Rector Sandbox. It contains the codebase and an environment to run the site for development.
 
+## Development Note
+
+In preparation for Drupal 10, we will start supporting PHP 7.4 and PHP 8 for development. To do so requires configuring DDEV, and as a result, we encourage you to run all `composer` and `rector` commands via `ddev exec` (alias `ddev .`).
+
+The current `main` branch supports PHP 7.4.
+
 ## Table of Contents
 
 - [Drupal Rector Sandbox](#drupal-rector-sandbox)
@@ -20,22 +26,22 @@ This is the development repository for the Drupal Rector Sandbox. It contains th
 
 ## Running Drupal Rector
 
-Run `composer install`
+Run `ddev . composer install`
 
 You can view the Rector report by running
-`vendor/bin/rector process web/modules/custom/my-module --dry-run`
+`ddev . vendor/bin/rector process web/modules/custom/my-module --dry-run`
 
 Rector can update your code by running
-`vendor/bin/rector process web/modules/custom/my-module`
+`ddev . vendor/bin/rector process web/modules/custom/my-module`
 
 ### Running Drupal Rector against a test module
 
 Drupal Rector comes with a test module that you can use to confirm rules are working.
-`vendor/bin/rector process web/modules/custom/rector_examples --dry-run`
+`ddev . vendor/bin/rector process web/modules/custom/rector_examples --dry-run`
 
 ## Developing with Drupal Rector
 
-1. Run `composer install` or `composer update` (it will execute a script `develop-rector.sh` that prepares a development
+1. Run `ddev . composer install` or `ddev . composer update` (it will execute a script `develop-rector.sh` that prepares a development
 environment under `drupal-project/` directory.
 1. [Fork drupal-rector project](https://github.com/palantirnet/drupal-rector/fork)
 1. Add your forked repo inside `drupal-project/` directory
@@ -51,10 +57,11 @@ environment under `drupal-project/` directory.
 1. Run Rector against the examples
 
     ```console
-    vendor/bin/rector process web/modules/custom/rector_examples --dry-run
+    ddev . vendor/bin/rector process web/modules/custom/rector_examples --dry-run
     ```
 
 1. Submit a PR to https://github.com/palantirnet/drupal-rector.
+2. Reference the PR in a Drupal.org issue: https://www.drupal.org/project/issues/rector
 
 ## Development Environment
 
@@ -73,7 +80,7 @@ environment under `drupal-project/` directory.
 
     ```console
     ddev restart
-    composer install
+    ddev . composer install
     ddev . drush si demo_umami -y
     ```
 
