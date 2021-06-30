@@ -3365,10 +3365,10 @@
             "dist": {
                 "type": "path",
                 "url": "drupal-rector",
-                "reference": "a0d0d4e1ccb11cd63a22901e42a9231460cd1b0f"
+                "reference": "64f6441290a22b559d5e1f351cab53838213a582"
             },
             "require": {
-                "rector/rector-prefixed": "~0.10.0",
+                "rector/rector": "~0.11.0",
                 "webflo/drupal-finder": "^1.2"
             },
             "replace": {
@@ -3376,10 +3376,11 @@
                 "palantirnet/drupal8-rector": "*"
             },
             "require-dev": {
-                "behat/behat": "^3.6",
+                "php": "^8.0",
                 "phpstan/extension-installer": "^1.1",
                 "phpstan/phpstan": "^0.12.82",
                 "phpstan/phpstan-deprecation-rules": "^0.12.6",
+                "rector/rector-src": "~0.11.0",
                 "symfony/yaml": "^5"
             },
             "type": "library",
@@ -4043,16 +4044,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "0.12.85",
+            "version": "0.12.90",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "20e6333c0067875ad7697cd8acdf245c6ef69d03"
+                "reference": "f0e4b56630fc3d4eb5be86606d07212ac212ede4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/20e6333c0067875ad7697cd8acdf245c6ef69d03",
-                "reference": "20e6333c0067875ad7697cd8acdf245c6ef69d03",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/f0e4b56630fc3d4eb5be86606d07212ac212ede4",
+                "reference": "f0e4b56630fc3d4eb5be86606d07212ac212ede4",
                 "shasum": ""
             },
             "require": {
@@ -4083,11 +4084,15 @@
             "description": "PHPStan - PHP Static Analysis Tool",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan/issues",
-                "source": "https://github.com/phpstan/phpstan/tree/0.12.85"
+                "source": "https://github.com/phpstan/phpstan/tree/0.12.90"
             },
             "funding": [
                 {
                     "url": "https://github.com/ondrejmirtes",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/phpstan",
                     "type": "github"
                 },
                 {
@@ -4099,7 +4104,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-04-27T14:13:16+00:00"
+            "time": "2021-06-18T07:15:38+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -4756,26 +4761,32 @@
             "time": "2019-03-08T08:55:37+00:00"
         },
         {
-            "name": "rector/rector-prefixed",
-            "version": "0.10.21",
+            "name": "rector/rector",
+            "version": "0.11.28",
             "source": {
                 "type": "git",
-                "url": "https://github.com/rectorphp/rector-prefixed.git",
-                "reference": "c14f4b73e32bb4c5ff0b339caa4de005bc0a7f09"
+                "url": "https://github.com/rectorphp/rector.git",
+                "reference": "6f309b7ae44667c21efd3935f1a55746914bbc68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector-prefixed/zipball/c14f4b73e32bb4c5ff0b339caa4de005bc0a7f09",
-                "reference": "c14f4b73e32bb4c5ff0b339caa4de005bc0a7f09",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/6f309b7ae44667c21efd3935f1a55746914bbc68",
+                "reference": "6f309b7ae44667c21efd3935f1a55746914bbc68",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1|^8.0",
-                "phpstan/phpstan": "0.12.85"
+                "phpstan/phpstan": ">=0.12.86 <=0.12.90"
             },
             "conflict": {
                 "phpstan/phpdoc-parser": "<=0.5.3",
-                "phpstan/phpstan": "<=0.12.82"
+                "phpstan/phpstan": "<=0.12.82",
+                "rector/rector-cakephp": "*",
+                "rector/rector-doctrine": "*",
+                "rector/rector-nette": "*",
+                "rector/rector-phpunit": "*",
+                "rector/rector-prefixed": "*",
+                "rector/rector-symfony": "*"
             },
             "bin": [
                 "bin/rector"
@@ -4797,10 +4808,16 @@
             ],
             "description": "Prefixed and PHP 7.1 downgraded version of rector/rector",
             "support": {
-                "source": "https://github.com/rectorphp/rector-prefixed/tree/0.10.21"
+                "issues": "https://github.com/rectorphp/rector/issues",
+                "source": "https://github.com/rectorphp/rector/tree/0.11.28"
             },
-            "abandoned": "rector/rector",
-            "time": "2021-05-09T17:59:11+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/tomasvotruba",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-06-28T09:49:38+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
