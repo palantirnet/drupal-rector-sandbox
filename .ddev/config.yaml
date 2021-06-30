@@ -13,6 +13,7 @@ mysql_version: ""
 provider: default
 use_dns_when_possible: true
 composer_version: ""
+web_environment: []
 
 working_dir:
   web: /var/www/html
