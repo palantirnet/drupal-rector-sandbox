@@ -8,7 +8,7 @@ This is the php7 branch, suitable for use developing upgrade rules for Drupal 8 
 
 ### Switching branches
 
-If you need to switch from php7 to php8 (the `php8` [https://github.com/palantirnet/drupal-rector-sandbox/tree/php8/web](branch) of the sandbox), follow these steps.
+If you need to switch from php7 to php8 (the `php8` [branch of the sandbox](https://github.com/palantirnet/drupal-rector-sandbox/tree/php8/web)), follow these steps.
 
 - Checkout the branch you want (e.g. `git checkout main` or `git checkout php8`)
 - `rm -rf vendor`
@@ -18,8 +18,6 @@ If you need to switch from php7 to php8 (the `php8` [https://github.com/palantir
 ## Development Note
 
 In preparation for Drupal 10, we will start supporting PHP 7.4 and PHP 8 for development. To do so requires configuring DDEV, and as a result, we encourage you to run all `composer` and `rector` commands via `ddev exec` (alias `ddev .`).
-
-The current `main` branch supports PHP 7.4 and may require running `ddev restart` and then `ddev . composer update`.
 
 ## Table of Contents
 
