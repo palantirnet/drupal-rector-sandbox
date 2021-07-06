@@ -46,6 +46,12 @@ This command is aliased in the `test-rector.sh` script in project root, so you c
 
 `./test-rector.sh`
 
+You can also run the PHPUnit tests with:
+
+`ddev . vendor/bin/phpunit vendor/palantirnet/drupal-rector/tests`
+
+This command is aliased in `./phpunit.sh`.
+
 ## Developing with Drupal Rector
 
 1. Run `ddev . composer install` or `ddev . composer update` (it will execute a script `develop-rector.sh` that prepares a development
