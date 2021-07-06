@@ -10,8 +10,8 @@ This is the php8 branch, suitable for use developing upgrade rules for Drupal 9 
 
 If you need to switch from php8 to php7 (the `main` [PHP 7.4 branch](https://github.com/palantirnet/drupal-rector-sandbox/tree/main)), follow these steps.
 
-- Checkout the branch you want
-- `rm -rf vendor` (e.g. `git checkout main` or `git checkout php8`)
+- Checkout the branch you want (e.g. `git checkout main` or `git checkout php8`)
+- `rm -rf vendor`
 - `ddev restart`
 - `ddev . composer install`
 
