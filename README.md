@@ -8,7 +8,7 @@ This is the php7 branch, suitable for use developing upgrade rules for Drupal 8 
 
 ### Switching branches
 
-If you need to switch from php7 to php8 (the `php8` [https://github.com/palantirnet/drupal-rector-sandbox/tree/php8/web](branch)), follow these steps.
+If you need to switch from php7 to php8 (the `php8` [https://github.com/palantirnet/drupal-rector-sandbox/tree/php8/web](branch) of the sandbox), follow these steps.
 
 - Checkout the branch you want (e.g. `git checkout main` or `git checkout php8`)
 - `rm -rf vendor`
