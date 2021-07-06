@@ -40,7 +40,11 @@ Rector can update your code by running:
 
 Drupal Rector comes with a test module that you can use to confirm rules are working:
 
-`ddev . vendor/bin/rector process web/modules/custom/rector_examples --dry-run`
+`ddev . vendor/bin/rector process drupal-rector/rector_examples --dry-run`
+
+This command is aliased in the `test-rector.sh` script in project root, so you can run this from project root instead:
+
+`./test-rector.sh`
 
 ## Developing with Drupal Rector
 
@@ -60,7 +64,7 @@ environment under `drupal-project/` directory.
 1. Run Rector against the examples
 
     ```console
-    ddev . vendor/bin/rector process web/modules/custom/rector_examples --dry-run
+    ddev . vendor/bin/rector process drupal-rector/rector_examples --dry-run
     ```
 
 1. Submit a PR to https://github.com/palantirnet/drupal-rector.
@@ -143,6 +147,7 @@ This project was built more or less using these steps.
 - Update `composer.json` to use the version side-loaded.
 - Add `PhpUnit` since it doesn't get installed by default and is needed for some rules.
 - Add a `docker-compose.env.yaml` file for DDEV to support XDebug
+- Add `test-rector.sh` script for testing shortcuts.
 
 ----
 Copyright 2017-2021 Palantir.net, Inc.
