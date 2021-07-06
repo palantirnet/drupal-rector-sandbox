@@ -23,10 +23,3 @@ if [ ! -e "rector.php" ]; then
   echo "Copying rector.php into the document root directory"
   cp drupal-rector/rector.php .
 fi
-
-# Create symlink for rector_examples to be in drupal's default module directory
-if [ ! -L "web/modules/custom/rector_examples" ]; then
-  echo "Creating a symlink for web/modules/custom/rector_examples..."
-  mkdir -p web/modules/custom
-  ln -s ../../../drupal-rector/rector_examples web/modules/custom/rector_examples
-fi
