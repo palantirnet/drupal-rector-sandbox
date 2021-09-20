@@ -2,6 +2,10 @@
 
 This is the development repository for the Drupal Rector Sandbox. It contains the codebase and an environment to run the site for development.
 
+## php7 branch
+
+This is the php7 branch, suitable for use developing upgrade rules for Drupal 8 to Drupal 9.
+
 ### Switching branches
 
 If you need to switch from php7 to php8 (the `php8` [branch of the sandbox](https://github.com/palantirnet/drupal-rector-sandbox/tree/php8/web)), follow these steps.
@@ -52,12 +56,6 @@ Drupal Rector comes with a test module that you can use to confirm rules are wor
 This command is aliased in the `test-rector.sh` script in project root, so you can run this from project root instead:
 
 `./test-rector.sh`
-
-You can also run the PHPUnit tests with:
-
-`ddev . vendor/bin/phpunit vendor/palantirnet/drupal-rector/tests`
-
-This command is aliased in `./phpunit.sh`.
 
 ## Developing with Drupal Rector
 
