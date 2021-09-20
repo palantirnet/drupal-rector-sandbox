@@ -2,13 +2,9 @@
 
 This is the development repository for the Drupal Rector Sandbox. It contains the codebase and an environment to run the site for development.
 
-## php8 branch
-
-This is the php8 branch, suitable for use developing upgrade rules for Drupal 9 to Drupal 10.
-
 ### Switching branches
 
-If you need to switch from php8 to php7 (the `main` [PHP 7.4 branch](https://github.com/palantirnet/drupal-rector-sandbox/tree/main)), follow these steps.
+If you need to switch from php7 to php8 (the `php8` [branch of the sandbox](https://github.com/palantirnet/drupal-rector-sandbox/tree/php8/web)), follow these steps.
 
 - Checkout the branch you want (e.g. `git checkout main` or `git checkout php8`)
 - `rm -rf vendor`
