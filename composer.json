@@ -8,6 +8,9 @@
         "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
         "chat": "https://www.drupal.org/node/314178"
     },
+    "platform": {
+        "php": "8.2"
+    },
     "repositories": [
         {
             "type": "composer",
@@ -31,8 +34,7 @@
         "drupal/devel": "^5.1",
         "drupal/examples": "^4.0",
         "drush/drush": "^11.4",
-        "palantirnet/drupal-rector": "dev-main",
-        "phpunit/phpunit": "^9.6"
+        "palantirnet/drupal-rector": "dev-main"
     },
     "conflict": {
         "drupal/drupal": "*"

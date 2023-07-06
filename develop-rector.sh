@@ -23,3 +23,9 @@ if [ ! -e "rector.php" ]; then
   echo "Copying rector.php into the document root directory"
   cp drupal-rector/rector.php .
 fi
+
+# Install test dependencies
+if [ ! -e "drupal-rector/vendor/bin/phpunit" ]; then
+  cd drupal-rector
+  composer install
+fi
