@@ -1,7 +1,7 @@
 name: drupal-rector-sandbox
-type: drupal8
+type: drupal9
 docroot: web
-php_version: "7.4"
+php_version: "8.2"
 webserver_type: nginx-fpm
 router_http_port: "80"
 router_https_port: "443"
@@ -15,7 +15,6 @@ working_dir:
 use_dns_when_possible: true
 composer_version: ""
 web_environment: []
-
 
 # This config.yaml was created with ddev version v1.17.5
 # webimage: drud/ddev-webserver:v1.17.4
@@ -160,7 +159,7 @@ web_environment: []
 # In this case the user must provide all such settings.
 
 # You can inject environment variables into the web container with:
-# web_environment: 
+# web_environment:
 # - SOMEENV=somevalue
 # - SOMEOTHERENV=someothervalue
 

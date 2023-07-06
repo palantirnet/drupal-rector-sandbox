@@ -6,6 +6,17 @@
 # Include Drupal settings files
 !/web/sites/*/settings.php
 !/web/sites/*/services.yml
+/web/.ht.router.php
+/web/.htaccess
+/web/INSTALL.txt
+/web/example.gitignore
+/web/robots.txt
+/web/sites/default/default.services.yml
+/web/sites/default/default.settings.php
+/web/sites/example.settings.local.php
+/web/sites/example.sites.php
+/web/update.php
+/web/web.config
 
 # Ignore local and generated settings files
 /web/sites/*/settings.local.php

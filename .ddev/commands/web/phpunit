@@ -1,0 +1,12 @@
+#!/bin/bash
+
+## Description: Run phpunit on drupal-rector itseld
+## Usage: phpunit
+## Example: "ddev phpunit"
+
+echo "Checking dependencies..."
+./develop-rector.sh
+
+echo "vendor/bin/phpunit --testdox"
+cd drupal-rector
+vendor/bin/phpunit --testdox

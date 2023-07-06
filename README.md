@@ -2,22 +2,9 @@
 
 This is the development repository for the Drupal Rector Sandbox. It contains the codebase and an environment to run the site for development.
 
-## php7 branch
+## Specifications
 
-This is the php7 branch, suitable for use developing upgrade rules for Drupal 8 to Drupal 9.
-
-### Switching branches
-
-If you need to switch from php7 to php8 (the `php8` [branch of the sandbox](https://github.com/palantirnet/drupal-rector-sandbox/tree/php8/web)), follow these steps.
-
-- Checkout the branch you want (e.g. `git checkout main` or `git checkout php8`)
-- `rm -rf vendor`
-- `ddev restart`
-- `ddev . composer install`
-
-## Development Note
-
-In preparation for Drupal 10, we will start supporting PHP 7.4 and PHP 8 for development. To do so requires configuring DDEV, and as a result, we encourage you to run all `composer` and `rector` commands via `ddev exec` (alias `ddev .`).
+This version of the sandbox runs Drupal core 10.1 on PHP 8.2.
 
 ## Table of Contents
 
@@ -39,23 +26,15 @@ In preparation for Drupal 10, we will start supporting PHP 7.4 and PHP 8 for dev
 
 Run `ddev . composer install`
 
-You can view the Rector report by running:
+### ddev rector
 
-`ddev . vendor/bin/rector process web/modules/custom/my-module --dry-run`
+**Command:** `ddev rector MODULE` or `ddev rector MODULE -d` or `ddev rector MODULE --dry-run`
 
-Rector can update your code by running:
+**Example:** `ddev rector rector_examples`
 
-`ddev . vendor/bin/rector process web/modules/custom/my-module`
+**Example:** `ddev rector rector_examples -d`
 
-### Running Drupal Rector against a test module
-
-Drupal Rector comes with a test module that you can use to confirm rules are working:
-
-`ddev . vendor/bin/rector process drupal-rector/rector_examples --dry-run`
-
-This command is aliased in the `test-rector.sh` script in project root, so you can run this from project root instead:
-
-`./test-rector.sh`
+The `rector` command will run Drupal Rector updates against the selected module, potentially rewriting the module's code. Using the `-d` or `--dry-run` flag will not perform the changes, but instead show the suggested changes.
 
 ## Developing with Drupal Rector
 
@@ -75,11 +54,18 @@ environment under `drupal-project/` directory.
 1. Run Rector against the examples
 
     ```console
-    ddev . vendor/bin/rector process drupal-rector/rector_examples --dry-run
+    `ddev rector rector_examples -d`
     ```
+Note that this command will test the Drupal 9 rule set. You can create and test new rules here.
 
 1. Submit a PR to https://github.com/palantirnet/drupal-rector.
 2. Reference the PR in a Drupal.org issue: https://www.drupal.org/project/issues/rector
+
+### Running phpunit tests
+
+`drupal-rector` itself uses phpunit for internal testing.
+
+`ddev phpunit` will run the tests for you.
 
 ## Development Environment
 
